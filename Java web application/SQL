@@ -1,0 +1,118 @@
+create database SWP_Project;
+
+use SWP_Project;
+
+CREATE TABLE account (
+    account_id INT PRIMARY KEY,
+    password NVARCHAR(255) NOT NULL,
+    phone_number NVARCHAR(20),
+    name NVARCHAR(100) NOT NULL,
+    email NVARCHAR(255) NOT NULL,
+    role INT NOT NULL
+);
+
+CREATE TABLE account_follower (
+    account_id INT,
+    follower_id INT,
+    PRIMARY KEY (account_id, follower_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id),
+    FOREIGN KEY (follower_id) REFERENCES account(account_id)
+);
+
+CREATE TABLE restaurant (
+    restaurant_id INT PRIMARY KEY,
+    address NVARCHAR(255) NOT NULL,
+    phone_number NVARCHAR(20),
+    lowest_price int,
+    highest_price int,
+    open_time TIME,
+    close_time TIME,
+	status int not null,
+);
+
+CREATE TABLE post (
+    post_id INT PRIMARY KEY,
+    account_id INT,
+	restaurant_id int,
+    title NVARCHAR(255) NOT NULL,
+    date DATETIME NOT NULL,
+    text NVARCHAR(MAX),
+    rating FLOAT,
+	status int not null,
+	FOREIGN KEY (restaurant_id) REFERENCES restaurant(restaurant_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id)
+);
+
+CREATE TABLE comment (
+    comment_id INT PRIMARY KEY,
+    post_id INT,
+    account_id INT,
+    text NVARCHAR(MAX) NOT NULL,
+	status int not null,
+    FOREIGN KEY (post_id) REFERENCES post(post_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id)
+);
+
+CREATE TABLE upvote (
+    comment_id INT,
+    account_id INT,
+	PRIMARY KEY (comment_id , account_id),
+    FOREIGN KEY (comment_id) REFERENCES comment(comment_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id)
+);
+
+CREATE TABLE comment_report (
+    comment_report_id INT PRIMARY KEY,
+    comment_id INT,
+    account_id INT,
+    type_of_report INT NOT NULL,
+    text NVARCHAR(MAX) NOT NULL,
+	status int not null,
+    FOREIGN KEY (comment_id) REFERENCES comment(comment_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id)
+);
+
+CREATE TABLE post_report (
+    post_report_id INT PRIMARY KEY,
+    post_id INT,
+    account_id INT,
+    type_of_report INT NOT NULL,
+    text NVARCHAR(MAX) NOT NULL,
+	status int not null,
+    FOREIGN KEY (post_id) REFERENCES post(post_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id)
+);
+
+CREATE TABLE media (
+    media_id INT PRIMARY KEY,
+    post_id INT,
+    media_type INT CHECK (media_type IN (1, 2)),
+    media_data VARBINARY(MAX) NOT NULL,
+    FOREIGN KEY (post_id) REFERENCES post(post_id)
+);
+
+CREATE TABLE type_of_meal (
+    type_of_meal_id INT PRIMARY KEY,
+    post_id INT,
+    FOREIGN KEY (post_id) REFERENCES post(post_id)
+);
+
+CREATE TABLE type_of_food (
+    type_of_food_id INT PRIMARY KEY,
+    post_id INT,
+    FOREIGN KEY (post_id) REFERENCES post(post_id)
+);
+
+CREATE TABLE react (
+    post_id INT,
+    account_id INT,
+	PRIMARY KEY (post_id , account_id),
+    FOREIGN KEY (post_id) REFERENCES post(post_id),
+    FOREIGN KEY (account_id) REFERENCES account(account_id)
+);
+
+
+
+INSERT INTO account (account_id, password, phone_number, name, email, role) 
+VALUES (1, '123', '1234567890', 'Nguyen Van A', 'nguyenvana@gmailcom.com', 2);
+(2, '123', '1234567890', 'Nguyen Van B', 'nguyenvanb@gmail.com.com', 2);

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Clone</title>
+
+    <!--For modal-->
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <!---->
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="log">
+                Logo
+            </h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="search for creators, inspirations, and projects">
+            </div>
+            <div class="create">
+                <a href="login.html">
+                    <label class="btn btn-primary" for="create-post">Login</label>
+                </a>
+
+                <div class="profile-photo">
+                    <img src="images/profile-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main section -->
+
+    <main>
+        <div class="container">
+            <div class="left">
+                <a class="profile" href="profile.html">
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg" alt="">
+                    </div>
+                    <div class="handle">
+                        <h4>Diana Ayi</h4>
+                        <p class="text-muted">@dayi</p>
+                    </div>
+                </a>
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <a class="menu-item" href="feed.html">
+                        <span><i class="uil uil-home"></i></span>
+                        <h3>Feed</h3>
+                    </a>
+                    <a class="menu-item" id="Notifications">
+                        <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
+                        <h3>Notifications</h3>
+                        <!-- Notification popup -->
+                        <div class="notifications-popup">
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="images/profile-2.jpg" alt="pic">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Keke Benjamin</b> accept your friend request
+                                    <small class="text-muted">2 Days AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="images/profile-3.jpg" alt="pic">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Hojo Ben</b> commented on your post
+                                    <small class="text-muted">12 HOUR AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="images/profile-4.jpg" alt="pic">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Ratul Das</b> commented on your post
+                                    <small class="text-muted">5 HOUR AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="images/profile-5.jpg" alt="pic">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Amit Shaha</b> commented on your post
+                                    <small class="text-muted">2 HOUR AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="images/profile-6.jpg" alt="pic">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Donal Trump</b> accept your friend request
+                                    <small class="text-muted">1 HOUR AGO</small>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="profile-photo">
+                                    <img src="images/profile-7.jpg" alt="pic">
+                                </div>
+                                <div class="notification-body">
+                                    <b>Jane Doe</b> commented on your post
+                                    <small class="text-muted">1 HOUR AGO</small>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="menu-item active" href="explore.html">
+                        <span><i class="uil uil-compass"></i></span>
+                        <h3>Explore</h3>
+                    </a>
+
+                </div>
+                <label for="create-post" class="btn btn-primary">Create Post</label>
+            </div>
+            <!-- End of Left -->
+
+            <div class="middle">
+
+                <!-- Stories -->
+                <div class="stories">
+                    <div class="story">
+
+                        <p class="name">Đồ ăn</p>
+                    </div>
+                    <div class="story">
+
+                        <p class="name">Đồ uống</p>
+                    </div>
+                    <div class="story">
+
+                        <p class="name">Ăn vặt</p>
+                    </div>
+                    <div class="story">
+
+                        <p class="name">Ăn sáng</p>
+                    </div>
+                    <div class="story">
+
+                        <p class="name">Ăn trưa</p>
+                    </div>
+                    <div class="story">
+
+                        <p class="name">Ăn tối</p>
+                    </div>
+                </div>
+                <!-- End of Stories -->
+
+
+                <!-- Feeds -->
+                <div class="explore">
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-13.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Lana Rose</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        
+                        <small>15 MINUTES AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-1.jpg">
+                        </div>
+
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="caption">
+                            <p><b>Lana Rose</b> Beautifull pic of my sister mona. <span
+                                    class="harsh-tag">#lifestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-14.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Kumar Boss</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <small>Goa, 35 MINUTES AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-2.jpg">
+                        </div>
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="caption">
+                            <p><b>Kumar Boss</b> Another good day with myself <span class="harsh-tag">#glass</span></p>
+                        </div>
+                        <div class="comments text-muted">View all 52 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-2.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Jasmin Roy</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <small>Mumbai, 1 HOUR AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-3.jpg">
+                        </div>
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="caption">
+                            <p><b>Jasmin Roy</b> Happy Life is the best <span class="harsh-tag">#flower</span></p>
+                        </div>
+                        <div class="comments text-muted">View all 177 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-16.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Mrinal Santos</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        
+                        <small>Dubai, 25 MINUTES AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-4.jpg">
+                        </div>
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Mrinal Santos</b> Beautifull pic of my friends. <span class="harsh-tag">#friend</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View all 270 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-17.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Samoli Das</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        
+                        <small>Kolkata, 50 MINUTES AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-6.jpg">
+                        </div>
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="caption">
+                            <p><b>Samoli Das</b> A busy day... <span class="harsh-tag">#lifestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">View all 717 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-18.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Rohon Roy</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        
+                        <small>Dubai, 55 MINUTES AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-7.jpg">
+                        </div>
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="caption">
+                            <p><b>Rohon Roy</b> My Beautifull sister <span class="harsh-tag">#sister</span></p>
+                        </div>
+                        <div class="comments text-muted">View all 555 comments</div>
+                    </div>
+
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="images/profile-19.jpg" alt="pic">
+                                </div>
+                                <div class="info">
+                                    <h5>Bhola Rose</h5>
+                                    
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        
+                        <small>Dubai, 15 MINUTES AGO</small>
+
+                        <div class="photo">
+                            <img src="images/feed-5.jpg">
+                        </div>
+
+                        <div class="desc">
+                            <div class="icons">
+                                <div class="icon_left d-flex">
+                                    <div class="like">
+                                        <img class="not_loved" src="./images/love.png">
+                                        <img class="loved" src="./images/heart.png">
+                                    </div>
+                                    <div class="chat">
+                                        <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                            data-bs-target="#message_modal">
+                                            <img src="./images/bubble-chat.png">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="save not_saved">
+                                    <img class="hide saved" src="./images/save_black.png">
+                                    <img class="not_saved" src="./images/save-instagram.png">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="caption">
+                            <p><b>Bhola Rose</b> Beautifull pic of pic <span class="harsh-tag">#lifestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">View all 277 comments</div>
+                    </div>
+
+
+                </div>
+
+                <div class="right">
+                    <div class="messages">
+                        <div class="heading">
+                            <h4>Following</h4><i class="uil uil-edit"></i>
+                        </div>
+
+                        <!-- message -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="images/profile-17.jpg">
+                            </div>
+                            <div class="message-body">
+                                <h5>Edem Quist</h5>
+                                <p class="text-muted">Just woke up bruh</p>
+                            </div>
+                        </div>
+                        <!-- message -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="images/profile-3.jpg">
+                            </div>
+                            <div class="message-body">
+                                <h5>France Deila</h5>
+                                <p class="text-muted">Recived bruh, thanks</p>
+                            </div>
+                        </div>
+                        <!-- message -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="images/profile-4.jpg">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Jane Doe</h5>
+                                <p class="text-muted">Ok</p>
+                            </div>
+                        </div>
+                        <!-- message -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="images/profile-5.jpg">
+                            </div>
+                            <div class="message-body">
+                                <h5>Daniel Jakson</h5>
+                                <p class="text-muted">2 new messages</p>
+                            </div>
+                        </div>
+                        <!-- message -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="images/profile-6.jpg">
+                            </div>
+                            <div class="message-body">
+                                <h5>Justin Heoi</h5>
+                                <p class="text-muted">Lol u right</p>
+                            </div>
+                        </div>
+                        <!-- message -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="images/profile-7.jpg">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Chantel Msiza</h5>
+                                <p class="text-muted">Birthday Tomorrow!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Message -->
+
+
+                </div>
+            </div>
+    </main>
+
+    <!-- Theme Customization -->
+
+    <div class="customize-theme">
+        <div class="card">
+            <h2>Customize your view</h2>
+            <p class="text-muted">Manage your font size, color, and background.</p>
+
+            <!-- Font sizes -->
+
+            <div class="font-size">
+                <h4>Font Size</h4>
+                <div>
+                    <h6>Aa</h6>
+                    <div class="choose-size">
+                        <span class="font-size-1"></span>
+                        <span class="font-size-2 active"></span>
+                        <span class="font-size-3"></span>
+                        <span class="font-size-4"></span>
+                        <span class="font-size-5"></span>
+                    </div>
+                    <h3>Aa</h3>
+                </div>
+            </div>
+
+            <!-- Primary colors -->
+            <div class="color">
+                <h4>Color</h4>
+                <div class="choose-color">
+                    <span class="color-1"></span>
+                    <span class="color-2"></span>
+                    <span class="color-3 active"></span>
+                    <span class="color-4"></span>
+                    <span class="color-5"></span>
+                </div>
+            </div>
+
+            <!-- Background colors -->
+            <div class="background">
+                <h4>Background</h4>
+                <div class="choose-bg">
+                    <div class="bg-1 active">
+                        <span></span>
+                        <h5 for="bg-1">Light</h5>
+                    </div>
+                    <div class="bg-2">
+                        <span></span>
+                        <h5>Dim</h5> <!--  for="bg-2" -->
+                    </div>
+                    <div class="bg-3">
+                        <span></span>
+                        <h5 for="bg-3">Lights out</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Comment modal -->
+    <div class="modal fade" id="message_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"
+            style="max-width: 40%; width: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="modal-content">
+                <div class="feed" style="padding: 2% 2%;">
+                    <div class="head" style="display: flex;">
+                        <div class="user" style="display: flex;">
+                            <div class="profile-photo">
+                                <img src="images/profile-13.jpg" alt="pic">
+                            </div>
+                            <div class="info">
+                                <h3>Lana Rose</h3>
+                                <small>15 MINUTES AGO</small>
+                            </div>
+                        </div>
+                        <span class="edit">
+                            <i class="uil uil-ellipsis-h"></i>
+                        </span>
+                    </div>
+
+                    <div class="photo">
+                        <img src="images/feed-1.jpg">
+                    </div>
+
+
+                    <div class="desc">
+                        <div class="icons">
+                            <div class="icon_left d-flex">
+                                <div class="like">
+                                    <img class="not_loved" src="./images/love.png">
+                                    <img class="loved" src="./images/heart.png">
+                                </div>
+                                <div class="chat">
+                                    <button type="button" class="btn p-0" data-bs-toggle="modal"
+                                        data-bs-target="#message_modal">
+                                        <img src="./images/bubble-chat.png">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="save not_saved">
+                                <img class="hide saved" src="./images/save_black.png">
+                                <img class="not_saved" src="./images/save-instagram.png">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="caption">
+                        <p><b>Lana Rose</b> Beautifull pic of my sister mona. <span class="harsh-tag">#lifestyle</span>
+                        </p>
+                    </div>
+                    <div class="comments text-muted">View all 277 comments</div>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Comments</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="comments">
+                        <div class="comment">
+                            <div class="d-flex">
+                                <div class="img">
+                                    <img src="./images/profile_img.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <div class="person">
+                                        <h4>namePerson</h4>
+                                        <span>3j</span>
+                                    </div>
+                                    <p>Wow amzing shot</p>
+                                </div>
+                            </div>
+                            <div class="like">
+                                <img class="not_loved" src="./images/love.png" alt="Not Loved">
+                                <img class="loved" src="./images/heart.png" alt="Loved">
+                                <p>55</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <form method="post">
+                        <div class="input">
+                            <img src="./images/profile_img.jpg" alt="">
+                            <input type="text" id="emoji_comment" placeholder="Add a comment..." />
+                        </div>
+                        <!-- <div class="emogi">
+                            <img src="./images/emogi.png" alt="">
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let love_icons = document.querySelectorAll(".like");
+        love_icons.forEach(function (icon) {
+            icon.addEventListener("click", function () {
+                let not_loved = icon.children[0];
+                let loved = icon.children[1];
+                icon.classList.toggle("love");
+                not_loved.classList.toggle("hide_img");
+                loved.classList.toggle("display");
+            })
+        });
+        let save_icon = document.querySelectorAll(".save");
+        save_icon.forEach(function (save) {
+            save.addEventListener("click", function () {
+                let not_save = save.children[1];
+                let saved = save.children[0];
+                not_save.classList.toggle("hide");
+                saved.classList.toggle("hide");
+
+            })
+        })
+
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
